@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pop-Up Example</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+    function openPopup() {
+      // Customize the pop-up window content
+      const popupContent = `
+        <html>
+        <head>
+          <title>Pop-Up Window</title>
+        </head>
+        <body>
+          <h1>Hello, World</h1>
+          <p>This is a small paragraph of text in the pop-up window.</p>
+        </body>
+        </html>
+      `;
+
+      const popup = window.open('', 'PopupWindow', 'width=400,height=300');
+      popup.document.write(popupContent);
+    }
+
+    // Set an interval to open the pop-up every 30 seconds
+    setInterval(openPopup, 30000); // 30,000 milliseconds = 30 seconds
+  </script>
+</head>
+<body>
+
+  <div>
+    <div>
+
+      <button> Click me to win a 50€ Amazon gift card </button>
+    </div>
+
+    <div class="hover-bottom">
+        <button id="example" disabled>No, I don't want free 50€</button>
+    </div>
+</div>    
+</body>
+</html>
