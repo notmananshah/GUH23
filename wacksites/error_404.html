@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404: You've been Rickrolled!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: aqua;
+            color: maroon;
+            text-align: center;
+        }
+        h1 {
+            font-size: 10em;
+            color: lime;
+            text-shadow: 5px 5px 0 orange, 10px 10px 0 purple, 15px 15px 0 pink;
+            animation: spin 5s infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #fakeBackButton, #realBackButton {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: orange;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Error 404</h1>
+
+    <!-- Fake back button -->
+    <div id="fakeBackButton" onclick="rickrollSound()">Go Back</div>
+    <!-- Real back button -->
+    <div id="realBackButton" onclick="window.history.back()">Actually Go Back</div>
+
+    <!-- Rickroll sound -->
+    <audio id="rickrollAudio" src="https://www.myinstants.com/media/sounds/rickroll.mp3"></audio>
+
+    <script>
+        // Pop-up Rick Astley GIF function (from previous code)
+        function rickroll() {
+            window.open('https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif', 'rickroll', 'width=400,height=300');
+            setTimeout(rickroll, 5000);
+        }
+        rickroll();
+
+        // Play Rickroll sound function
+        function rickrollSound() {
+            document.getElementById('rickrollAudio').play();
+            document.getElementById('fakeBackButton').style.display = 'none';
+            document.getElementById('realBackButton').style.display = 'block';
+        }
+
+        // Show fake back button after 7 seconds
+        setTimeout(() => {
+            document.getElementById('fakeBackButton').style.display = 'block';
+        }, 7000);
+    </script>
+</body>
+</html>
