@@ -1,0 +1,13 @@
+.course_units{
+    border-bottom: 1px;
+    border-bottom-style: dashed;
+}
+.column-style{
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+
+}
+a{
+    color: #154c79;
+}
