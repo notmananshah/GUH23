@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exiting: The Ultimate Challenge</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: aqua;
+            color: maroon;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            text-decoration: underline overline;
+        }
+        .exitButton {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 1.5em;
+        }
+        #creditCardPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 5px solid black;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exiting: The Ultimate Challenge</h1>
+    <p>Only one button will let you exit. But there's a twist...</p>
+
+    <!-- 11 Fake Exit Buttons -->
+    <button class="exitButton" onclick="alert('Wrong! Try another!')">Exit</button>
+    <!-- ... Repeat 10 more times ... -->
+    <button class="exitButton" onclick="alert('Wrong! Try another!')">Exit</button>
+
+
+    <!-- Real Exit Button -->
+    <button class="exitButton" onclick="showPopup()">Exit</button>
+
+    <!-- Credit Card Popup -->
+    <div id="creditCardPopup">
+        <h2>Enter Credit Card Info</h2>
+        <input type="text" id="creditField" placeholder="Credit Card Number">
+        <input type="text" placeholder="Expiry Date">
+        <input type="text" placeholder="CVV">
+        <button onclick="checkExit()">Exit</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('creditCardPopup').style.display = 'block';
+        }
+
+        function checkExit() {
+            const creditFieldValue = document.getElementById('creditField').value;
+            if (creditFieldValue === "sus") {
+                alert('You found the secret! You may exit now.');
+                window.location.href = 'main.html'; // Redirect to the main page
+            } else {
+                alert('Wrong info! Try again.');
+            }
+        }
+    </script>
+</body>
+</html>

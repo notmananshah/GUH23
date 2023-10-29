@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wackboard</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #FF69B4; /* hot pink */
+            color: limegreen;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: yellow;
+            text-align: center;
+            padding: 10px;
+            font-size: 3em;
+            border: 5px dashed blue;
+            animation: rotate 5s infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            50% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+            100% { transform: rotate(0deg); }
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .lesson {
+            border: 5px dotted orange;
+            padding: 20px;
+            margin: 20px;
+            background-color: purple;
+            width: calc(30% - 40px);
+            box-shadow: 10px 10px 5px black;
+            transition: transform 0.5s;
+        }
+        .lesson:hover {
+            transform: scale(1.1);
+        }
+        .lesson h2 {
+            font-size: 2em;
+            text-decoration: underline overline double limegreen;
+        }
+        .lesson p {
+            font-size: 1.5em;
+            color: cyan;
+            text-shadow: 2px 2px red;
+        }
+        a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: wavy underline overline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Welcome to Wackboard! Good Luck Navigating!
+    </div>
+    <div class="content">
+        <div class="lesson">
+            <h2><a href="trun_on.html">How to turn on a computer?</a></h2>
+            <p>Hint: If you're here, you've done it! Or...have you?</p>
+        </div>
+        <div class="lesson">
+            <h2><a href="breathing.html">Breathing: Overrated?</a></h2>
+            <p>Some say you need it, some don't. Who to trust?</p>
+        </div>
+        <div class="lesson">
+            <h2><a href="mouse.html">Advanced: Using a mouse!</a></h2>
+            <p>Are they just for chasing? Let's dive deep into the world of these creatures!</p>
+        </div>
+        <div class="lesson">
+            <h2><a href="error_404.html">Error 404: Wait, what?</a></h2>
+            <p>Did we forget? Or did YOU? The plot thickens...</p>
+        </div>
+        <div class="lesson">
+            <h2><a href="exit.html">Exiting: The Ultimate Challenge</a></h2>
+            <p>If you've made it this far, are you sure you want to leave? Stay a while...</p>
+        </div>
+    </div>
+    <a href="main.html">Back to Wackboard</a>
+</body>
+</html>
