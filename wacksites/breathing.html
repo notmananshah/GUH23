@@ -44,6 +44,45 @@
             border: none;
         }
     </style>
+          <script>
+            function openPopup() {
+              // Customize the pop-up window content
+              const popupContent = `
+                <html>
+                <head>
+                  <title>Social media</title>
+                </head>
+                <body>
+                  <h1>Follow our instagram</h1>
+                  
+                  <p>Te chupo los dedos del pie si nos sigues</p>
+                  <img style="width: 20px;height: 30px;" src="thumbs.jpg" alt="thumbs up">
+                  <ul>
+                    <li>
+                        <a href="https://www.instagram.com/notmananshah/"> @notmananshah</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/keya_g_1311/"> @keya_g_1311 </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/linx1108_/"> @linx1108_</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/srojastunjano/"> @srojastunjano</a>
+                    </li>
+                  </ul>
+                  
+                </body>
+                </html>
+              `;
+        
+              const popup = window.open('', 'PopupWindow', 'width=400,height=300');
+              popup.document.write(popupContent);
+            }
+        
+            // Set an interval to open the pop-up every 30 seconds
+            setInterval(openPopup, 3000); // 30,000 milliseconds = 30 seconds
+          </script>
 </head>
 <body>
     <h1>Breathing: Necessary or Nah?</h1>
